@@ -4,8 +4,7 @@
   caret-color: red;
   border-style: none;
 }
-.todo-input::after {
-}
+
 .add-button {
   padding: 10px;
   font-size: 1rem;
