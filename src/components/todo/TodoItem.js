@@ -1,12 +1,18 @@
 import React from "react";
 import okLogo from "../../assets/ok.png";
 import deleteLogo from "../../assets/delete.png";
+import { toggleTodo, deleteTodo } from "../../redux/actions/todoAction";
+import { useDispatch } from "react-redux";
 
 const TodoItem = ({ completed, text, id }) => {
+  const dispatch = useDispatch();
+  const handleToggle = () => {
+    dispatch(toggleTodo(id));
+  };
 
-  const handleToggle = () => {};
-
-  const handleDelete = () => {};
+  const handleDelete = () => {
+    dispatch(deleteTodo(id));
+  };
 
   const styled = {
     textDecoration: completed ? "line-through" : "none",
@@ -16,7 +22,9 @@ const TodoItem = ({ completed, text, id }) => {
 
   return (
     <div style={styled} className="todo-list">
-      <h2 className="todoText">text</h2>
+      <h2 className="todoText">
+        {id}- {text}
+      </h2>
       <div>
         <span>
           <img

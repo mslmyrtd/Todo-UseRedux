@@ -5,11 +5,11 @@ const TodoInput = () => {
   const [text, setText] = useState("");
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (text) {
       dispatch(addTodo(text));
       setText("");
     }
-    e.preventDefault();
   };
   return (
     <form onSubmit={handleSubmit}>

@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { createStore } from "redux";
 import { Provider } from "react-redux";
-import todoReducer from "./redux/reducer/todoReducer";
+import { combineStore } from "./redux";
 
-const store = createStore(todoReducer);
+const store = combineStore();
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

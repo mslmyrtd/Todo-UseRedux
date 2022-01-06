@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -6,11 +7,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(
-    0deg,
-    rgba(234, 246, 244, 1) 60%,
-    rgba(253, 187, 45, 0.9054972330729166) 60%
+    90deg,
+    hsla(239, 100%, 67%, 1) 0%,
+    hsla(187, 100%, 89%, 1) 100%
   );
-
+  font-family: "Irish Grover", cursive;
   min-height: 100vh;
   display: flex;
   justify-content: center;
